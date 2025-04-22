@@ -1,0 +1,9 @@
+# Ignore Visual Studio Code temporary files
+.vscode/
+*.code-workspace
+
+# Ignore build artifacts
+*.exe
+
+# Track only .cpp files
+!*.cpp

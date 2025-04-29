@@ -1,4 +1,36 @@
 # Parallel BFS Traversal Implementation
+## Sample Output
+
+```
+PARALLEL BFS TRAVERSAL
+=====================
+
+Enter number of vertices: 10000
+Enter edge density (edges per vertex): 5
+Enter start vertex (0 to 9999): 0
+Enter number of threads to use (0 for auto): 4
+
+Generating random graph with 10000 vertices and ~5 edges per vertex...
+
+Sequential BFS traversal...
+Time: 38 ms
+Nodes visited: 10000
+
+Parallel BFS traversal (4 threads)...
+Time: 356 ms
+Nodes visited: 10000
+
+Verified: Yes
+
+Performance comparison:
+Speedup: 0.11x
+
+Sample of sequential BFS traversal from vertex 0:
+0 6281 1663 8111 5765 5307 9143 7211 2325 9561 ... and 9990 more
+
+Sample of parallel BFS traversal from vertex 0:
+0 6281 1663 8111 5765 5307 9143 7211 2325 9561 ... and 9990 more
+```
 
 ## Parallel Computing Assignment
 
@@ -70,37 +102,4 @@ vector<int> bfs_par(const Graph& graph, int start) {
     
     return traversal_order;
 }
-```
-
-## Sample Output
-
-```
-PARALLEL BFS TRAVERSAL
-=====================
-
-Enter number of vertices: 10000
-Enter edge density (edges per vertex): 5
-Enter start vertex (0 to 9999): 0
-Enter number of threads to use (0 for auto): 4
-
-Generating random graph with 10000 vertices and ~5 edges per vertex...
-
-Sequential BFS traversal...
-Time: 38 ms
-Nodes visited: 10000
-
-Parallel BFS traversal (4 threads)...
-Time: 356 ms
-Nodes visited: 10000
-
-Verified: Yes
-
-Performance comparison:
-Speedup: 0.11x
-
-Sample of sequential BFS traversal from vertex 0:
-0 6281 1663 8111 5765 5307 9143 7211 2325 9561 ... and 9990 more
-
-Sample of parallel BFS traversal from vertex 0:
-0 6281 1663 8111 5765 5307 9143 7211 2325 9561 ... and 9990 more
 ```
